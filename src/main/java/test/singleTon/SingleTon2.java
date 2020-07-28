@@ -16,6 +16,7 @@ public class SingleTon2 {
 
   }
 
+  //DCL double check lock
   public static SingleTon2 getInstance() {
     if (instance != null){
       return instance;
