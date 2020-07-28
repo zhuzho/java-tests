@@ -24,7 +24,8 @@ public class PrintTwoArray {
 //    testWaitNotify(num,word);
 //    testCondition(num,word);
 //    testLockSupport(num,word);
-    testLockQueue(num,word);
+//    testLockQueue(num,word);
+    System.out.println(-1<<1);
   }
   static Thread t1;
   static Thread t2;
