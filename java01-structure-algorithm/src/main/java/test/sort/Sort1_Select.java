@@ -1,7 +1,7 @@
 package test.sort;
 
 /**
- * 时间复杂度O(n^2) 不稳定(相同的值有可能会被调换顺序)
+ * time:O(n^2) ,space:1 ,不稳定(相同的值有可能会被调换顺序)
  * @author zhuzhong@yunsom.com
  * @date 2020-08-10 9:27
  * @description

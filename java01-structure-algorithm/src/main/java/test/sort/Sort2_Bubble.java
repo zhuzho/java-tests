@@ -1,7 +1,7 @@
 package test.sort;
 
 /**
- * O(n^2)
+ * time:O(n^2) ,space:1 ,稳定
  * @author zhuzhong@yunsom.com
  * @date 2020-08-10 9:27
  * @description
