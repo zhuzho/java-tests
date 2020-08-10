@@ -30,10 +30,7 @@ public class VolatileTest {
       });
 
       try {
-        t1.start();
-        t1.join();
-        t2.start();
-        t2.join();
+        t1.start();t2.start();t1.join();t2.join();
       } catch (InterruptedException e) {
         e.printStackTrace();
       }

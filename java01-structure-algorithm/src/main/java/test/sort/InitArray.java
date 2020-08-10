@@ -25,10 +25,10 @@ public class InitArray {
     print(arr);
   }
 
-  static void init(){
+  static void init(int initSize){
     Random random = new Random();
     List<Integer> init = new ArrayList<>();
-    for (;init.size()<size;){
+    for (;init.size()<initSize;){
       int r = random.nextInt(50);
       if (!init.contains(r)){
         init.add(r);
@@ -38,7 +38,7 @@ public class InitArray {
   }
 
   static void print(Integer[] arr){
-    System.out.println(Arrays.toString(arr));
+    System.out.println("arr[size="+arr.length+"]:"+Arrays.toString(arr));
   }
 
   static void exchange(int i, int j){
