@@ -1,5 +1,6 @@
 package io1_bio;
 
+import config.IoDemo;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -18,13 +19,13 @@ import java.util.concurrent.TimeUnit;
  * @date 2020-08-10 15:53
  * @description
  */
-public class SocketSever01 {
+public class SocketSever01 extends IoDemo {
 
   public static void main(String[] args) {
     ServerSocket server ;
     try {
       server = new ServerSocket();
-      server.bind(new InetSocketAddress("127.0.0.1",8080));
+      server.bind(new InetSocketAddress(host,port));
       Socket socket;
 
       System.out.println("server is readying!");

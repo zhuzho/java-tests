@@ -1,5 +1,6 @@
 package io1_bio;
 
+import config.IoDemo;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -12,12 +13,12 @@ import java.net.Socket;
  * @date 2020-08-10 16:14
  * @description
  */
-public class SocketClient {
+public class SocketClient extends IoDemo {
 
   public static void main(String[] args) throws IOException {
     for (int i=0;i<10;i++){
       Socket socket = new Socket();
-      socket.connect(new InetSocketAddress("127.0.0.1", 8080));
+      socket.connect(new InetSocketAddress(host,port));
       OutputStream outputStream = socket.getOutputStream();
       outputStream.write("I am John".getBytes());
       outputStream.flush();
