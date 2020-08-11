@@ -38,7 +38,7 @@ public class NioServer extends IoDemo {
             System.out.println("receive client :"+cl.socket().getPort()+":"+new String(byteBuffer.array()));
             byteBuffer.clear();
             cl.write(ByteBuffer.wrap("rsa , public key is “ABC”".getBytes()));
-            cl.shutdownOutput();
+            byteBuffer.flip();
           }
         }
       }
