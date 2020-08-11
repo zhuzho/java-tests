@@ -21,11 +21,10 @@ public class PrintTwoArray {
   final static char[] word = "abcdef".toCharArray();
   public static void main(String[] args) {
 
-//    testWaitNotify(num,word);
+    testWaitNotify(num,word);
 //    testCondition(num,word);
 //    testLockSupport(num,word);
 //    testLockQueue(num,word);
-    System.out.println(-1<<1);
   }
   static Thread t1;
   static Thread t2;
@@ -170,11 +169,11 @@ public class PrintTwoArray {
               }else{
                 object.wait();
               }
+              System.out.print(ch);
+              object.notify();
             } catch (InterruptedException e) {
               e.printStackTrace();
             }
-            System.out.print(ch);
-            object.notify();
           }
           object.notify();
         }
