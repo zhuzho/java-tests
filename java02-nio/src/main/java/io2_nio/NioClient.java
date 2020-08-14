@@ -20,17 +20,26 @@ public class NioClient extends IoDemo{
       channel.configureBlocking(false);
       ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
       System.out.println("step1:链接已经建立");
-      if (channel.isConnected()){
-        channel.write(ByteBuffer.wrap("i had md5 rsa".getBytes()));
-        byteBuffer.flip();
-        byteBuffer.clear();
-        int lg = channel.read(byteBuffer);
-        if (lg>0){
-          System.out.println("receive from server:"+new String(byteBuffer.array()));
+      boolean write=true;
+      while (true){
+        if (channel.isConnected()){
+          if (write){
+            channel.write(ByteBuffer.wrap("i had md5 rsa".getBytes()));
+            byteBuffer.flip();
+            byteBuffer.clear();
+            write = false;
+          }
+          int lg = channel.read(byteBuffer);
+          if (lg>0){
+            System.out.println("receive from server:"+new String(byteBuffer.array()));
+          }
+          if (lg==-1){
+            break;
+          }
+          byteBuffer.clear();
         }
-        byteBuffer.clear();
-        channel.close();
       }
+      channel.close();
     } catch (IOException e) {
       e.printStackTrace();
     }

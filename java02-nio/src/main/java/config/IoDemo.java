@@ -7,7 +7,7 @@ package config;
  */
 public abstract class IoDemo {
 
-  protected static final String host = "0.0.0.0";
+  protected static final String host = "127.0.0.1";
 
   protected static final int port = 8081;
 }
