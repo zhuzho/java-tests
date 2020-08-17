@@ -12,6 +12,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
+import io.netty.util.CharsetUtil;
 
 /**
  * @author zhuzhong@yunsom.com
@@ -31,8 +32,8 @@ public class Server extends IoDemo {
           .childHandler(new ChannelInitializer<NioSocketChannel>() {
             protected void initChannel(NioSocketChannel ch)   {
               final ChannelPipeline pipeline = ch.pipeline();
-              pipeline.addLast("decoder",new StringDecoder());
-              pipeline.addLast("encoder",new StringEncoder());
+              pipeline.addLast("decoder",new StringDecoder(CharsetUtil.UTF_8));
+              pipeline.addLast("encoder",new StringEncoder(CharsetUtil.UTF_8));
               pipeline.addLast(new ServerChatGroupHandler());
             }
           })
