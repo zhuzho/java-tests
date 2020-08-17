@@ -10,7 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>java01-structure-algorithm</module>
-    <module>java01-nio</module>
+    <module>java02-nio</module>
   </modules>
 
   <name>test-smvc</name>
