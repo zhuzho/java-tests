@@ -38,7 +38,7 @@ public class ServerChatGroupHandler extends SimpleChannelInboundHandler<String> 
     System.out.println("handlerRemoved");
     final Channel channel = ctx.channel();
     channelGroup.writeAndFlush("[客户端]"+ channel.remoteAddress()+"离开聊天群\n");
-    channelGroup.add(channel);
+    channelGroup.remove(channel);
   }
 
   /**
