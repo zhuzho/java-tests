@@ -39,9 +39,11 @@ public class Server extends IoDemo {
               //聚合http请求的包
               pipeline.addLast(new HttpObjectAggregator(64*1024));
               pipeline.addLast(new ChunkedWriteHandler());
-              pipeline.addLast(new WebSocketServerProtocolHandler("/wsd"));
-              pipeline.addLast(new HttpRequestHandler("/wsd"));
-              pipeline.addLast(new ServerWebSocketHandler());
+//              pipeline.addLast(new WebSocketServerProtocolHandler("/wsd"));
+//              pipeline.addLast(new HttpRequestHandler("/wsd"));
+//              pipeline.addLast(new ServerWebSocketHandler());
+              pipeline.addLast(new WebSocketServerProtocolHandler("/wsd", "WebSocket", true, 65536 * 10));
+              pipeline.addLast(new ServerWebSocketHandler2());
             }
           }).childOption(ChannelOption.SO_KEEPALIVE,true);
       final ChannelFuture channelFuture = server.bind(port).sync();
