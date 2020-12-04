@@ -13,7 +13,7 @@ import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
 /**
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-14 16:33
  * @description
  */

@@ -11,7 +11,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 /**
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-21 14:13
  * @description
  */

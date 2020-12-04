@@ -9,7 +9,7 @@ import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
 /**
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-17 16:01
  * @description
  */

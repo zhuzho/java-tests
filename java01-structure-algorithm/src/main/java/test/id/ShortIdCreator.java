@@ -3,7 +3,7 @@ package test.id;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-11-16 14:28
  * @description
  */

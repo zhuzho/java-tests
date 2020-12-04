@@ -12,7 +12,7 @@ import java.util.Random;
  * 对N加K(桶计)N*K(基)
  * 不稳(选) 稳稳(泡插) 不稳(快) 稳(堆)
  * 不稳不稳稳稳稳
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-10 9:28
  * @description
  */

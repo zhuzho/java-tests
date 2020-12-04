@@ -4,7 +4,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 /**
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-17 16:28
  * @description
  */

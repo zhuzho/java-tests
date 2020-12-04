@@ -2,7 +2,7 @@ package test.singleTon;
 
 /**
  * 饿汉
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-07-28 9:59
  * @description
  */

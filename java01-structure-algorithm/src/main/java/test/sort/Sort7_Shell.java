@@ -3,7 +3,7 @@ package test.sort;
 /**
  * time:O(n^1.3),n*log2n  space:1 ,不稳
  * 每次排序
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-10 9:27
  * @description
  */

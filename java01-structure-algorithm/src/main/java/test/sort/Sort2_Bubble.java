@@ -2,7 +2,7 @@ package test.sort;
 
 /**
  * time:O(n^2) ,space:1 ,稳定
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-10 9:27
  * @description
  */

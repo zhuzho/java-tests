@@ -3,7 +3,7 @@ package io8_netty_proto;
 import lombok.Data;
 
 /**
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-21 14:04
  * @description
  */

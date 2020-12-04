@@ -2,7 +2,7 @@ package test.threadSort;
 
 /**
  * 指令重排序
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-07-23 17:26
  * @description
  */

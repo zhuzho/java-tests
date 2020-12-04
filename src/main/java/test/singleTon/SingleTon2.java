@@ -1,7 +1,7 @@
 package test.singleTon;
 
 /**
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-07-28 10:01
  * @description
  */

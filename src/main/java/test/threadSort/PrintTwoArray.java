@@ -10,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 2个线程有序交叉打印2个数组
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-07-23 15:52
  * @description
  */

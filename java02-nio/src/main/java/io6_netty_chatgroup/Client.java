@@ -15,7 +15,7 @@ import io.netty.util.CharsetUtil;
 import java.util.Scanner;
 
 /**
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-17 16:21
  * @description
  */

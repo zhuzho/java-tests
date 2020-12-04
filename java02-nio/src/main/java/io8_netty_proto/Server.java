@@ -13,7 +13,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
  * 利用自定义协议解决拆包和粘包问题
- * @author zhuzhong@yunsom.com
+ * @author farmer.zs@qq.com
  * @date 2020-08-21 13:52
  * @description
  */
