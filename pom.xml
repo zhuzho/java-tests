@@ -11,6 +11,7 @@
   <modules>
     <module>java01-structure-algorithm</module>
     <module>java02-nio</module>
+    <module>java03-short-id</module>
   </modules>
 
   <name>test-smvc</name>
@@ -33,7 +34,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.8</version>
+      <version>1.18.8    </version>
     </dependency>
 <!--    <dependency>
       <groupId>javax.servlet</groupId>
