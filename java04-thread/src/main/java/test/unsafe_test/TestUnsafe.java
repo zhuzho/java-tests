@@ -1,10 +1,9 @@
 package test.unsafe_test;
 
+import sun.misc.Unsafe;
+
 import java.lang.reflect.Field;
 import java.util.Arrays;
-import java.util.Objects;
-import java.util.stream.Collectors;
-import sun.misc.Unsafe;
 
 /**
  * @author farmer.zs@qq.com
