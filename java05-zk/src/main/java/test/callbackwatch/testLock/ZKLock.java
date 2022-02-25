@@ -27,10 +27,11 @@ import static org.apache.zookeeper.KeeperException.Code.NONODE;
  *<ul/>
  */
 public class ZKLock  implements
-        AsyncCallback.StringCallback,
-        AsyncCallback.Children2Callback,
-        AsyncCallback.StatCallback,
-        Watcher {
+        AsyncCallback.StringCallback,//创建临时有序节点回调
+        AsyncCallback.Children2Callback,//获取子元素回调
+        AsyncCallback.StatCallback,//检查前一节点释放存在回调
+        Watcher //前一节点发生变化时，被删除回调
+{
 
     final ZooKeeper zk;
     final String threadName;
