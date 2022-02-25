@@ -8,7 +8,24 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 import static org.apache.zookeeper.KeeperException.Code.NONODE;
-
+/**
+ *
+ * <ul>
+ * <li>step 1 :创建临时节点，设置StringCallback回调,阻塞业务线程
+ *  <li>step 2 :创建节点成功，获取自己的节点，并且开始获取目录下的子节点，传入Children2Callback回调。
+ *  <li>step 3 :子节点获取成功，开始排序，判断自己是否是最小的节点。
+ *           <pre>
+ *         |---3.1 是：加锁成功countDown(),设置业务线程唯一标识，后续可以重入，业务线程恢复
+ *          |---3.2 否：开始监听前一节点的是否存在，设置状态回调，以及监听；
+ *                  |3.2.1: 回调:
+ *                          |3.2.1.1:前一节点存在,回调不管
+ *                          |3.2.2.2: 状态回调判断出前一节点不存在，再次执行step3获取子节点数据
+ *                |3.2.2: 监听到前一节点被删除，执行step3
+ *                 <pre/>
+ *  <li>step4:释放锁,删除节点
+ *
+ *<ul/>
+ */
 public class ZKLock  implements
         AsyncCallback.StringCallback,
         AsyncCallback.Children2Callback,
@@ -26,8 +43,7 @@ public class ZKLock  implements
         this.threadName = threadName;
     }
 
-
-
+    /**step 1 创建临时节点，设置StringCallback回调*/
     public void tryLock(){
         zk.create(lockPrefix,threadName.getBytes()
                 , ZooDefs.Ids.OPEN_ACL_UNSAFE,
@@ -50,7 +66,7 @@ public class ZKLock  implements
         }
     }
     /**
-     *create AsyncCallback.StringCallback
+     *step 2 :创建节点成功，获取自己的节点，并且开始获取目录下的子节点，传入Children2Callback回调
      * */
     public void processResult(int rc, String path, Object ctx, String name) {
         if (name!=null){
